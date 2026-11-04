@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'preview_screen.dart';
 
-const String kRobotIconUrl =
-    'https://emojiisland.com/cdn/shop/products/Robot_Emoji_Icon_abe1111a-1293-4668-bdf9-9ceb05cff58e_large.png?v=1571606090';
-
 class InputScreen extends StatefulWidget {
   const InputScreen({super.key});
 
@@ -56,12 +53,10 @@ class _InputScreenState extends State<InputScreen> {
     showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(
-        icon: Image.network(
-          kRobotIconUrl,
+        icon: Image.asset(
+          'assets/robot.png',
           width: 56,
           height: 56,
-          errorBuilder: (context, error, stack) =>
-          const Icon(Icons.smart_toy, size: 56),
         ),
         content: Text(
           message,
